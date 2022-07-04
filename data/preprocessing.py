@@ -5,6 +5,8 @@ f2 = open('data/test.csv', 'w')
 
 with open('data/ratings.csv', 'r') as f:
     r = f.readline()
+    f1.write(r)
+    f2.write(r)
     
     while r != '':
         r = f.readline()
