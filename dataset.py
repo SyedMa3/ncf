@@ -36,3 +36,5 @@ for (u,i) in user_item_set:
         users.append(u)
         items.append(negative_item)
         labels.append(0)
+
+dset = [users, items, labels]
