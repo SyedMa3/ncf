@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 data = pd.read_csv('./data/ratings.csv')
-data['sort_latest'] = data.groupby(['userId'])['timestamp'].rank(method='First', ascending=False)
+data['sort_latest'] = data.groupby(['userId'])['timestamp'].rank(method='irst', ascending=False)
 
 train = data[data['sort_latest'] != 1]
 test = data[data['sort_latest'] == 1]
