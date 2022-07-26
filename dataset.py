@@ -37,4 +37,4 @@ for (u,i) in user_item_set:
         items.append(negative_item)
         labels.append(0)
 
-dset = [users, items, labels]
+dset = pd.DataFrame({'users': users,'items': items,'labels': labels})
