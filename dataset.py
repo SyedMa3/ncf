@@ -2,14 +2,21 @@ import pandas as pd
 import numpy as np
 
 data = pd.read_csv('./data/ratings.csv')
-data['sort_latest'] = data.groupby(['userId'])['timestamp'].rank(method='first', ascending=False)
 
+# data_count = data.groupby(['userId']).count()
+# data['count'] = data.groupby('userId').transform('count')
+# data = data[data['count'] > 1]
+
+# data['movie'] = data['movieId'].astype("category").cat.codes
+
+# movie_lookup = data[['movie', 'movieId']].drop_duplicates()
+
+data['sort_latest'] = data.groupby(['userId'])['timestamp'].rank(method='first', ascending=False)
 train = data[data['sort_latest'] != 1]
 test = data[data['sort_latest'] == 1]
 
-
 num_users = max(data['userId'].unique())
-num_movies = max(data['movieId'].unique())
+num_movies = max(data['movie'].unique())
 
 train.loc[:, 'rating'] = 1
 test.loc[:, 'rating'] = 1
