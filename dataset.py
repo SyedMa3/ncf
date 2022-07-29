@@ -16,7 +16,7 @@ train = data[data['sort_latest'] != 1]
 test = data[data['sort_latest'] == 1]
 
 num_users = max(data['userId'].unique())
-num_movies = max(data['movie'].unique())
+num_movies = max(data['movieId'].unique())
 
 train.loc[:, 'rating'] = 1
 test.loc[:, 'rating'] = 1
