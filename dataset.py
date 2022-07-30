@@ -18,8 +18,8 @@ test = data[data['sort_latest'] == 1]
 num_users = max(data['userId'].unique())
 num_movies = max(data['movieId'].unique())
 
-train.loc[:, 'rating'] = 1
-test.loc[:, 'rating'] = 1
+train = train.assign(rating=1)
+test = test.assign(rating=1)
 
 all_movieIds = data['movieId'].unique()
 
@@ -45,3 +45,5 @@ for (u,i) in user_item_set:
         labels.append(0)
 
 dset = pd.DataFrame({'users': users,'items': items,'labels': labels})
+
+print(test)
