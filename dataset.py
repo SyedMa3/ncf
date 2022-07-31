@@ -45,5 +45,3 @@ for (u,i) in user_item_set:
         labels.append(0)
 
 dset = pd.DataFrame({'users': users,'items': items,'labels': labels})
-
-print(test)

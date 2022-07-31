@@ -129,4 +129,5 @@ dmypy.json
 .pyre/
 
 
-/data/ml-latest-small/
+/data/ml-latest/
+*.csv
