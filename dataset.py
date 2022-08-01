@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-data = pd.read_csv('./data/ratings.csv')
+data = pd.read_csv('./data/ratings.dat', sep = "::", names = ['userId', 'movieId', 'rating', 'timestamp'], engine='python')
 
 # data_count = data.groupby(['userId']).count()
 # data['count'] = data.groupby('userId').transform('count')
@@ -43,5 +43,3 @@ for (u,i) in user_item_set:
         users.append(u)
         items.append(negative_item)
         labels.append(0)
-
-dset = pd.DataFrame({'users': users,'items': items,'labels': labels})
