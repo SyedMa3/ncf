@@ -8,8 +8,6 @@ This is an implementation of Neural Collaborative Filtering for a movie recommen
 
 I wanted to build a movie recommendation system and use deep learning for it. So I came across NCF and it seemed like a good starting point so I implemented it.
 
-I am also planning it to integrate it with a fully functional website so that I build an end-to-end movie recommendation system.
-
 To tackle the cold-start problem, we can ask the users to mention a few movies he liked and then proceed.
 
 ## Evaluation Protocols:
