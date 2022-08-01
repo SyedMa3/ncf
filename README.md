@@ -1,6 +1,6 @@
 # Neural Collaborative Filtering
 
-This is an implementation of Neural Collaborative Filtering for a movie recommendation system based on the MovieLens Dataset.
+This is an implementation of Neural Collaborative Filtering for a movie recommendation system based on the [MovieLens 1M Dataset](https://grouplens.org/datasets/movielens/).
 
 ### References:
 
@@ -22,3 +22,4 @@ Since it is too time consuming to rate every non-interacted movie, we take rando
 
 - [dataset.py](dataset.py) - Split the dataset into train and test and turned data into implicit feedback.
 - [neuMF.ipynb](model/neuMF.ipynb) - Train the model and predict 10 movies for a given user.
+- [model.h5](model.h5) - Saved model so that I can fine-tune on new users.
